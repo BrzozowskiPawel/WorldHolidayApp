@@ -9,7 +9,7 @@
 // Creating model for data from API
 import Foundation
 
-struct response: Decodable{
+struct HolidayResponse: Decodable{
     var response: Holidays
 }
 struct Holidays:Decodable {
