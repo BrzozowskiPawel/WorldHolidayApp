@@ -16,7 +16,7 @@ class HolidaysTableViewController: UITableViewController {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                self.navigationItem.title = "\(self.listOfHolidays.count) Holidays found in \(self.currentCountry)"
+                self.navigationItem.title = "\(self.listOfHolidays.count) Holidays found in \(self.getFlagEmoji(country: self.currentCountry))"
             }
         }
     }
@@ -60,6 +60,15 @@ class HolidaysTableViewController: UITableViewController {
                 self?.listOfHolidays = holidays
             }
         }
+    }
+    
+    func getFlagEmoji(country:String) -> String {
+        let base : UInt32 = 127397
+        var s = ""
+        for v in country.unicodeScalars {
+            s.unicodeScalars.append(UnicodeScalar(base + v.value)!)
+        }
+        return String(s)
     }
 
 }
