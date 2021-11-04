@@ -15,7 +15,7 @@ Just type your country ISO Alpha 2 code [list here] (https://www.nationsonline.o
 - [UI description](#ui-description)
 
 - [TableView](#tableview)
-- 
+
 - [Improvements](#improvements)
 
 - [Attribution](#attribution)
