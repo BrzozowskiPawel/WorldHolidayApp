@@ -10,11 +10,13 @@ import UIKit
 class HolidaysTableViewController: UITableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    var currentCountry = ""
     var listOfHolidays = [Holiday]() {
         didSet {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
-                self.navigationItem.title = "\(self.listOfHolidays.count) Holidays found"
+                self.navigationItem.title = "\(self.listOfHolidays.count) Holidays found in \(self.currentCountry)"
             }
         }
     }
@@ -48,7 +50,8 @@ class HolidaysTableViewController: UITableViewController {
     }
     
     func getDataInitialy() {
-        let holidayRequest = HolidayReguest(countryCode: "US")
+        self.currentCountry = "PL"
+        let holidayRequest = HolidayReguest(countryCode: self.currentCountry)
         holidayRequest.getData { [weak self] result in
             switch result {
             case .failure(let error):
@@ -64,7 +67,8 @@ class HolidaysTableViewController: UITableViewController {
 extension HolidaysTableViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchBarText = searchBar.text else {return}
-        let holidayRequest = HolidayReguest(countryCode: searchBarText)
+        self.currentCountry = searchBarText
+        let holidayRequest = HolidayReguest(countryCode: self.currentCountry)
         holidayRequest.getData { [weak self] result in
             switch result {
             case .failure(let error):
