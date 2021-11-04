@@ -59,5 +59,5 @@ Scrolling thru all cells in TableView: </br>
 Unfortunately, I haven't had a better one 😢. </br>
  
 ## Attribution
-In this app, I am not the owner or creator of the app image. /Br> 
-As it is written in the rules I am attributing the website where I have downloaded this icon [link](https://www.flaticon.com/free-icon/holiday_3199857?term=holiday&page=1&position=9&page=1&position=9&related_id=3199857&origin=search). /Br>
+In this app, I am not the owner or creator of the app image. </br> 
+As it is written in the rules I am attributing the website where I have downloaded this icon [link](https://www.flaticon.com/free-icon/holiday_3199857?term=holiday&page=1&position=9&page=1&position=9&related_id=3199857&origin=search). </br>
