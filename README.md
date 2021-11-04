@@ -23,7 +23,7 @@ Just type your country ISO Alpha 2 code [list here] (https://www.nationsonline.o
 ## Demo
 
 
-<img src="readme_files/DEMO.gif" alt="demo_gif" width="372"/> 
+<img src="WorldHolidays/readme_files/DEMO.gif" alt="demo_gif" width="372"/> 
 
 ## Description
 
@@ -51,7 +51,7 @@ I am using NavigationControler and as the number of holidays + country flag emoj
 ## TableView
 Scrolling thru all cells in TableView: </br>
 
-<img src="readme_files/TABLE.gif" alt="demo_gif" width="372"/> 
+<img src="WorldHolidays/readme_files/TABLE.gif" alt="demo_gif" width="372"/> 
 
 ## Room for improvements
 
