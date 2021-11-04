@@ -10,7 +10,6 @@ import UIKit
 class HolidaysTableViewController: UITableViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
-    
     var listOfHolidays = [Holiday]() {
         didSet {
             DispatchQueue.main.async {
@@ -24,6 +23,7 @@ class HolidaysTableViewController: UITableViewController {
         super.viewDidLoad()
 
         searchBar.delegate = self
+        getDataInitialy()
     }
 
     // MARK: - Table view data source
@@ -46,6 +46,18 @@ class HolidaysTableViewController: UITableViewController {
         cell.detailTextLabel?.text = holiday.date.iso
         return cell
     }
+    
+    func getDataInitialy() {
+        let holidayRequest = HolidayReguest(countryCode: "US")
+        holidayRequest.getData { [weak self] result in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let holidays):
+                self?.listOfHolidays = holidays
+            }
+        }
+    }
 
 }
 
@@ -63,3 +75,5 @@ extension HolidaysTableViewController: UISearchBarDelegate {
         }
     }
 }
+
+
