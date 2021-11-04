@@ -1,7 +1,7 @@
 # World Holiday App
 
 App for showing holidays in a specific country around the world. </br>
-Just type your country ISO Alpha 2 code [list here] (https://www.nationsonline.org/oneworld/country_code_list.htm) and chech whether you are missing holiday today!
+Just type your country ISO Alpha 2 code [list here](https://www.nationsonline.org/oneworld/country_code_list.htm) and chech whether you are missing holiday today!
 
 
 ## Table of Contents
